@@ -442,21 +442,6 @@ MODAL EDITAR PRODUCTO
 
             </div>
 
-            <!-- ENTRADA PARA SUBIR FOTO -->
-
-             <div class="form-group">
-              
-              <div class="panel">SUBIR IMAGEN</div>
-
-              <input type="file" class="nuevaImagen" name="editarImagen">
-
-              <p class="help-block">Peso máximo de la imagen 2MB</p>
-
-              <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
-
-              <input type="hidden" name="imagenActual" id="imagenActual">
-
-            </div>
 
           </div>
 
