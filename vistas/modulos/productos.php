@@ -44,11 +44,11 @@ if($_SESSION["perfil"] == "Vendedor"){
           Agregar producto
 
         </button>
+        <a href="" class="btn btn-success pull-right">Descargar Reporte en Excel</a>
 
       </div>
 
       <div class="box-body">
-        
        <table class="table table-bordered table-striped dt-responsive tablaProductos" width="100%">
          
         <thead>
