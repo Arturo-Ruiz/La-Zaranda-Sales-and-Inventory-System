@@ -106,8 +106,7 @@ class ControladorProductos{
 							   "descripcion" => $_POST["editarDescripcion"],
 							   "stock" => $_POST["editarStock"],
 							   "precio_compra" => $_POST["editarPrecioCompra"],
-							   "precio_venta" => $_POST["editarPrecioVenta"],
-							   "imagen" => $ruta);
+							   "precio_venta" => $_POST["editarPrecioVenta"]);
 
 				$respuesta = ModeloProductos::mdlEditarProducto($tabla, $datos);
 
@@ -166,12 +165,6 @@ class ControladorProductos{
 			$tabla ="productos";
 			$datos = $_GET["idProducto"];
 
-			if($_GET["imagen"] != "" && $_GET["imagen"] != "vistas/img/productos/default/anonymous.png"){
-
-				unlink($_GET["imagen"]);
-				rmdir('vistas/img/productos/'.$_GET["codigo"]);
-
-			}
 
 			$respuesta = ModeloProductos::mdlEliminarProducto($tabla, $datos);
 
