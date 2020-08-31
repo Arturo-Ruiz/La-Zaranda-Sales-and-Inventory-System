@@ -44,7 +44,7 @@ if($_SESSION["perfil"] == "Vendedor"){
           Agregar producto
 
         </button>
-        <a href="" class="btn btn-success pull-right">Descargar Reporte en Excel</a>
+        <a href="vistas/modulos/descargar-reporte-productos.php" class="btn btn-success pull-right">Descargar Reporte en Excel</a>
 
       </div>
 
