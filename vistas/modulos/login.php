@@ -2,11 +2,11 @@
 
 <div class="login-box">
   
-  <div class="login-logo">
+  <!-- <div class="login-logo">
 
     <img src="vistas/img/plantilla/logo-blanco-bloque.png" class="img-responsive">
 
-  </div>
+  </div> -->
 
   <div class="login-box-body">
 
