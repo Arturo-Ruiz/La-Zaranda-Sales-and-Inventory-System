@@ -1,3 +1,9 @@
+<style>
+.btn-move{
+  transform:translate(125%);
+}
+</style>
+
 <!-- <div id="back"></div> -->
 
 <div class="login-box">
@@ -32,7 +38,7 @@
        
         <div class="col-xs-4">
 
-          <button type="submit" class="btn btn-primary btn-block ">Ingresar</button>
+          <button type="submit" class="btn-move btn btn-primary btn-block ">Ingresar</button>
         
         </div>
 
