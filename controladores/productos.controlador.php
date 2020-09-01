@@ -263,10 +263,12 @@ class ControladorProductos{
 			 echo utf8_decode("<tr>
 			 			<td style='border:1px solid #eee;'>".$item["codigo"]."</td> 
 			 			<td style='border:1px solid #eee;'>".$categoria["categoria"]."</td> 
-						 <td style='border:1px solid #eee;'>".$item["descripcion"]."</td> 
-			 			<td style='border:1px solid #eee;'>".$item["stock"]."</td> 
-						 <td style='border:1px solid #eee;'>".$item["precio_compra"]."</td> 
-						 <td style='border:1px solid #eee;'>".$item["precio_venta"]."</td> 
+						<td style='border:1px solid #eee;'>".$item["descripcion"]."</td> 
+						<td style='border:1px solid #eee;'>".$item["stock"]."</td> 
+						<td style='border:1px solid #eee;'>$ ".number_format($item["precio_compra"],2)."</td>
+						<td style='border:1px solid #eee;'>$ ".number_format($item["precio_venta"],2)."</td>
+							
+					
 
 						 
 						 
