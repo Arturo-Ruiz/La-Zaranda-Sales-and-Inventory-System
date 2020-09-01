@@ -178,10 +178,99 @@ if($_SESSION["perfil"] == "Especial"){
 
                 <div class="row">
 
-                  <!--=====================================
-                  ENTRADA IMPUESTOS Y TOTAL
-                  ======================================-->
+                    
+                <div class="col-xs-8 pull-right">
+                    
+                    <table class="table">
+
+                      <thead>
+
+                        <tr>
+                          <th>Tasa del dia</th>
+                        </tr>
+
+                      </thead>
+
+                      <tbody>
+                      
+                        <tr>
+                          
+                          <td style="width: 100%">
+                            
+                            <div class="input-group">
+                           
+                              <input type="number" class="form-control input-lg" min="0" id="nuevoTasadeldia" name="nuevoTasadeldia" placeholder="0">
+
+                              <span class="input-group-addon"><i class="">Bs</i></span>
+                        
+                            </div>
+
+                          </td>
+
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+
+                  </div>
                   
+                  <div class="col-xs-8 pull-right">
+                    
+                    <table class="table">
+
+                      <thead>
+
+                        <tr>
+                          <th>Impuesto</th>
+                          <th>Total $</th>      
+                        </tr>
+
+                      </thead>
+
+                      <tbody>
+                      
+                        <tr>
+                          
+                          <td style="width: 50%">
+                            
+                            <div class="input-group">
+                           
+                              <input type="number" class="form-control input-lg" min="0" id="nuevoImpuestoVenta" name="nuevoImpuestoVenta" placeholder="0">
+
+                               <input type="hidden" name="nuevoPrecioImpuesto" id="nuevoPrecioImpuesto" required>
+
+                               <input type="hidden" name="nuevoPrecioNeto" id="nuevoPrecioNeto" required>
+
+                              <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                        
+                            </div>
+
+                          </td>
+
+                           <td style="width: 50%">
+                            
+                            <div class="input-group">
+                           
+                              <span class="input-group-addon"><i class="ion ion-social-usd"></i></span>
+
+                              <input type="text" class="form-control input-lg" id="nuevoTotalVenta" name="nuevoTotalVenta" total="" placeholder="00000" readonly required>
+
+                              <input type="hidden" name="totalVenta" id="totalVenta">
+                              
+                        
+                            </div>
+
+                          </td>
+
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+
+                  </div>
+     
                   <div class="col-xs-8 pull-right">
                     
                     <table class="table">
@@ -236,8 +325,7 @@ if($_SESSION["perfil"] == "Especial"){
 
                     </table>
 
-                  </div>
-
+                  </div> 
                 </div>
 
                 <hr>
