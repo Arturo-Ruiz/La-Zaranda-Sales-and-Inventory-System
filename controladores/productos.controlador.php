@@ -263,7 +263,7 @@ class ControladorProductos{
 			 echo utf8_decode("<tr>
 			 			<td style='border:1px solid #eee;'>".$item["codigo"]."</td> 
 			 			<td style='border:1px solid #eee;'>".$categoria["categoria"]."</td> 
-			 			<td style='border:1px solid #eee;'>".$item["codigo"]."</td> 
+			 			<td style='border:1px solid #eee;'>".$item["descripcion"]."</td> 
 					 
 						 ");
 
