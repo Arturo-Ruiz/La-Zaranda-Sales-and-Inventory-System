@@ -7,7 +7,7 @@ class ModeloCategorias{
 	/*=============================================
 	CREAR CATEGORIA
 	=============================================*/
-
+	
 	static public function mdlIngresarCategoria($tabla, $datos){
 
 		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(categoria) VALUES (:categoria)");
@@ -25,6 +25,41 @@ class ModeloCategorias{
 		}
 
 		$stmt->close();
+		$stmt = null;
+
+	}
+
+
+
+	/*=============================================
+	MOSTRAR CATEGORIAS CONFORME ID
+	=============================================*/
+
+	static public function MdlMostrarCategorias_id($tabla, $item, $valor){
+
+		if($item != null){
+
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+
+			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+
+			$stmt -> execute();
+
+			return $stmt -> fetch();
+
+		}else{
+
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+
+			$stmt -> execute();
+
+			return $stmt -> fetchAll();
+
+		}
+		
+
+		$stmt -> close();
+
 		$stmt = null;
 
 	}

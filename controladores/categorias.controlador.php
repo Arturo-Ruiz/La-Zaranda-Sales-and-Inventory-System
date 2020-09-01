@@ -178,4 +178,19 @@ class ControladorCategorias{
 		}
 		
 	}
+
+
+	/*=============================================
+	MOSTRAR CATEGORIA CONFORME ID
+	=============================================*/
+
+	static public function ctrMostrarCategorias_id($item, $valor){
+
+		$tabla = "categorias";
+
+		$respuesta = ModeloCategorias::MdlMostrarCategorias_id($tabla, $item, $valor);
+
+		return $respuesta;
+	}
+
 }
