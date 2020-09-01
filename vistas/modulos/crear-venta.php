@@ -170,8 +170,9 @@ if($_SESSION["perfil"] == "Especial"){
                 <!--=====================================
                 BOTÓN PARA AGREGAR PRODUCTO
                 ======================================-->
-
                 <button type="button" class="btn btn-default hidden-lg btnAgregarProducto">Agregar producto</button>
+
+                <button type="button" class="btn btn-primary">Visualizar Tasa del dia</button>
 
                 <hr>
 
