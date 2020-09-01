@@ -13,7 +13,7 @@ $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
 
   <div class="box-header with-border">
 
-    <h3 class="box-title">Recently Added Products</h3>
+    <h3 class="box-title">Productos agregados recientemente</h3>
 
     <div class="box-tools pull-right">
 
@@ -42,12 +42,6 @@ $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
     for($i = 0; $i < 10; $i++){
 
       echo '<li class="item">
-
-        <div class="product-img">
-
-          <img src="'.$productos[$i]["imagen"].'" alt="Product Image">
-
-        </div>
 
         <div class="product-info">
 
