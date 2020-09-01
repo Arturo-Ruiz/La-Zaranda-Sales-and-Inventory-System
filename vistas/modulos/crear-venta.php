@@ -178,14 +178,15 @@ if($_SESSION["perfil"] == "Especial"){
 
                 <div class="row">
 
-                    
-                <div class="col-xs-8 pull-right">
+                      
+                  <div class="col-xs-8 pull-right">
                     
                     <table class="table">
 
                       <thead>
 
                         <tr>
+                        <th></th>
                           <th>Tasa del dia</th>
                         </tr>
 
@@ -194,18 +195,22 @@ if($_SESSION["perfil"] == "Especial"){
                       <tbody>
                       
                         <tr>
+                        
+                        <td style="width: 15%"></td>
                           
-                          <td style="width: 100%">
+                          <td style="width: 50%">
                             
                             <div class="input-group">
                            
-                              <input type="number" class="form-control input-lg" min="0" id="nuevoTasadeldia" name="nuevoTasadeldia" placeholder="0">
+                              <input type="text" class="form-control input-lg" min="0" id="nuevotasadeldia" name="nuevotasadeldia" placeholder="0">
 
                               <span class="input-group-addon"><i class="">Bs</i></span>
                         
                             </div>
 
                           </td>
+
+                         
 
                         </tr>
 
@@ -214,6 +219,7 @@ if($_SESSION["perfil"] == "Especial"){
                     </table>
 
                   </div>
+           
                   
                   <div class="col-xs-8 pull-right">
                     

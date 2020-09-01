@@ -13,6 +13,9 @@ CARGAR LA TABLA DINÁMICA DE VENTAS
 
 // })// 
 
+
+
+
 $('.tablaVentas').DataTable( {
     "ajax": "ajax/datatable-ventas.ajax.php",
     "deferRender": true,
@@ -358,9 +361,10 @@ $(".btnAgregarProducto").click(function(){
 
 	        // PONER FORMATO AL PRECIO DE LOS PRODUCTOS
 
-	        $(".nuevoPrecioProducto").number(true, 2);
+			$(".nuevoPrecioProducto").number(true, 2);
+			
 
-
+			
       	}
 
 	})
@@ -538,6 +542,8 @@ FORMATO AL PRECIO FINAL
 =============================================*/
 
 $("#nuevoTotalVenta").number(true, 2);
+$("#nuevotasadeldia").number(true, 2);
+
 
 /*=============================================
 SELECCIONAR MÉTODO DE PAGO
