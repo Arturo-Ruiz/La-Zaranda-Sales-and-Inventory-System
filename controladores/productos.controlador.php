@@ -265,7 +265,7 @@ class ControladorProductos{
 			 			<td style='border:1px solid #eee;'>".$categoria["categoria"]."</td> 
 						 <td style='border:1px solid #eee;'>".$item["descripcion"]."</td> 
 			 			<td style='border:1px solid #eee;'>".$item["stock"]."</td> 
-			 			<td style='border:1px solid #eee;'>".$item["descripcion"]."</td> 
+			 			<td style='border:1px solid #eee;'>".$item["precio_compra"]."</td> 
 						 
 					 
 						 ");
