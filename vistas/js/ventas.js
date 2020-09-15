@@ -134,7 +134,7 @@ $(".tablaVentas tbody").on("click", "button.agregarProducto", function(){
 
 	          '<div class="col-xs-3">'+
 	            
-	             '<input type="number" class="form-control nuevaCantidadProducto" name="nuevaCantidadProducto" min="1" value="1" stock="'+stock+'" nuevoStock="'+Number(stock-1)+'" required>'+
+	             '<input type="text" class="form-control nuevaCantidadProducto" name="nuevaCantidadProducto"  stock="'+stock+'" nuevoStock="'+Number(stock-1)+'" required>'+
 
 	          '</div>' +
 
@@ -328,7 +328,7 @@ $(".btnAgregarProducto").click(function(){
 
 	          '<div class="col-xs-3 ingresoCantidad">'+
 	            
-	             '<input type="number" class="form-control nuevaCantidadProducto" name="nuevaCantidadProducto" min="1" value="0" stock nuevoStock required>'+
+	             '<input type="text" class="form-control nuevaCantidadProducto" name="nuevaCantidadProducto"  value="0" stock nuevoStock required>'+
 
 	          '</div>' +
 
