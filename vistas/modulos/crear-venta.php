@@ -172,6 +172,7 @@ if($_SESSION["perfil"] == "Especial"){
                 <button type="button" class="btn btn-default hidden-lg btnAgregarProducto">Agregar producto</button>
 
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Visualizar Tasa del dia</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCliente">Registar Cliente</button>
 
                 <hr>
 
