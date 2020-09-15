@@ -13,6 +13,8 @@ if($_SESSION["perfil"] == "Vendedor"){
 }
 
 ?>
+
+
 <div class="content-wrapper">
 
   <section class="content-header">
@@ -122,7 +124,7 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
 
-                <select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required>
+                <select class=" input-lg  form-control  " style="width: 100%;height: 75%;" id="nuevaCategoria" name="nuevaCategoria" required>
                   
                   <option value="">Selecionar categoría</option>
 
@@ -154,7 +156,7 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-code"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" required>
+                <input type="text"  class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Código" required readonly>
 
               </div>
 
@@ -168,7 +170,7 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar descripción" required>
+                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar Nombre" required>
 
               </div>
 
@@ -325,7 +327,7 @@ MODAL EDITAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
 
-                <select class="form-control input-lg"  name="editarCategoria" readonly required>
+                <select  class=" form-control input-lg"  name="editarCategoria" readonly required>
                   
                   <option id="editarCategoria"></option>
 
@@ -343,7 +345,7 @@ MODAL EDITAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-code"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="editarCodigo" name="editarCodigo" readonly required>
+                <input type="text"  class="form-control input-lg" id="editarCodigo" name="editarCodigo" readonly required>
 
               </div>
 
@@ -481,4 +483,8 @@ MODAL EDITAR PRODUCTO
 ?>      
 
 
-
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
+</script>

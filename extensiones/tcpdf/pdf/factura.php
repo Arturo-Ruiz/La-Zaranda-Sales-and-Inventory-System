@@ -31,6 +31,12 @@ $neto = number_format($respuestaVenta["neto"],2);
 $impuesto = number_format($respuestaVenta["impuesto"],2);
 $total = number_format($respuestaVenta["total"],2);
 
+$tasa_dia = number_format($respuestaVenta["tasa_dia"],2);
+
+$netoBs= number_format($tasa_dia * $neto,2);
+$impuestoBs= number_format($tasa_dia * $impuesto,2);
+$totalBs= number_format($tasa_dia * $total,2);
+
 //TRAEMOS LA INFORMACIÓN DEL CLIENTE
 
 $itemCliente = "id";
@@ -62,19 +68,21 @@ $bloque1 = <<<EOF
 	<table>
 		
 		<tr>
-			
-			<td style="width:150px"><img src="images/logo-negro-bloque.png"></td>
+			<td style="width:150px">
+		<br>
+
+			<h3 class="text-center">Restaurant La Zaranda Criolla C.A		</h3>
+			</td>
 
 			<td style="background-color:white; width:140px">
 				
 				<div style="font-size:8.5px; text-align:right; line-height:15px;">
 					
 					<br>
-					NIT: 71.759.963-9
+					RIF: J-407580167
 
 					<br>
-					Dirección: Calle 44B 92-11
-
+					
 				</div>
 
 			</td>
@@ -84,10 +92,9 @@ $bloque1 = <<<EOF
 				<div style="font-size:8.5px; text-align:right; line-height:15px;">
 					
 					<br>
-					Teléfono: 300 786 52 49
+					Dirección: Av Cedeño Calle Guasipati Casa nro 24. Ciudad bolivar. VE 
 					
 					<br>
-					ventas@inventorysystem.com
 
 				</div>
 				
@@ -188,6 +195,11 @@ $valorUnitario = number_format($respuestaProducto["precio_venta"], 2);
 
 $precioTotal = number_format($item["total"], 2); 
 
+$valorUnitarioBs= number_format($tasa_dia * $valorUnitario,2);
+$precioTotalBs= number_format($tasa_dia * $precioTotal,2);
+
+
+
 $bloque4 = <<<EOF
 
 	<table style="font-size:10px; padding:5px 10px;">
@@ -202,12 +214,12 @@ $bloque4 = <<<EOF
 				$item[cantidad]
 			</td>
 
-			<td style="border: 1px solid #666; color:#333; background-color:white; width:100px; text-align:center">$ 
-				$valorUnitario
+			<td style="border: 1px solid #666; color:#333; background-color:white; width:100px; text-align:center">Bs 
+				$valorUnitarioBs
 			</td>
 
-			<td style="border: 1px solid #666; color:#333; background-color:white; width:100px; text-align:center">$ 
-				$precioTotal
+			<td style="border: 1px solid #666; color:#333; background-color:white; width:100px; text-align:center">Bs
+				$precioTotalBs
 			</td>
 
 
@@ -247,7 +259,7 @@ $bloque5 = <<<EOF
 			</td>
 
 			<td style="border: 1px solid #666; color:#333; background-color:white; width:100px; text-align:center">
-				$ $neto
+				Bs $netoBs
 			</td>
 
 		</tr>
@@ -261,7 +273,7 @@ $bloque5 = <<<EOF
 			</td>
 		
 			<td style="border: 1px solid #666; color:#333; background-color:white; width:100px; text-align:center">
-				$ $impuesto
+				Bs $impuestoBs
 			</td>
 
 		</tr>
@@ -275,7 +287,7 @@ $bloque5 = <<<EOF
 			</td>
 			
 			<td style="border: 1px solid #666; color:#333; background-color:white; width:100px; text-align:center">
-				$ $total
+				Bs $totalBs
 			</td>
 
 		</tr>

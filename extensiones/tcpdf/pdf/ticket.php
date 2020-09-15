@@ -31,6 +31,13 @@ $neto = number_format($respuestaVenta["neto"],2);
 $impuesto = number_format($respuestaVenta["impuesto"],2);
 $total = number_format($respuestaVenta["total"],2);
 
+$tasa_dia = number_format($respuestaVenta["tasa_dia"],2);
+
+$netoBs= number_format($tasa_dia * $neto,2);
+$impuestoBs= number_format($tasa_dia * $impuesto,2);
+$totalBs= number_format($tasa_dia * $total,2);
+
+
 //TRAEMOS LA INFORMACIÓN DEL CLIENTE
 
 $itemCliente = "id";
@@ -69,18 +76,15 @@ $bloque1 = <<<EOF
 			<div>
 			
 				Fecha: $fecha
-
+			
 				<br><br>
-				Inventory System
-				
+				Restaurant La Zaranda Criolla C.A				
 				<br>
-				NIT: 71.759.963-9
+				RIF: J-407580167
 
 				<br>
-				Dirección: Calle 44B 92-11
+				Dirección: Av Cedeño Calle Guasipati Casa nro 24. Ciudad bolivar. VE 
 
-				<br>
-				Teléfono: 300 786 52 49
 
 				<br>
 				FACTURA N.$valorVenta
@@ -115,6 +119,10 @@ $valorUnitario = number_format($item["precio"], 2);
 
 $precioTotal = number_format($item["total"], 2);
 
+$valorUnitarioBs =  number_format($tasa_dia*$valorUnitario, 2); 
+$precioTotalBs =  number_format($tasa_dia*$precioTotal, 2); 
+
+
 $bloque2 = <<<EOF
 
 <table style="font-size:9px;">
@@ -130,7 +138,7 @@ $bloque2 = <<<EOF
 	<tr>
 	
 		<td style="width:160px; text-align:right">
-		$ $valorUnitario Und * $item[cantidad]  = $ $precioTotal
+		Bs $valorUnitarioBs Und * $item[cantidad]  = Bs $precioTotalBs
 		<br>
 		</td>
 
@@ -157,7 +165,7 @@ $bloque3 = <<<EOF
 		</td>
 
 		<td style="width:80px;">
-			$ $neto
+			Bs $netoBs
 		</td>
 
 	</tr>
@@ -169,7 +177,7 @@ $bloque3 = <<<EOF
 		</td>
 
 		<td style="width:80px;">
-			$ $impuesto
+			Bs $impuestoBs
 		</td>
 
 	</tr>
@@ -189,7 +197,7 @@ $bloque3 = <<<EOF
 		</td>
 
 		<td style="width:80px;">
-			$ $total
+			Bs $totalBs
 		</td>
 
 	</tr>
@@ -199,7 +207,7 @@ $bloque3 = <<<EOF
 		<td style="width:160px;">
 			<br>
 			<br>
-			Muchas gracias por su compra
+			Muchas gracias por su compra!
 		</td>
 
 	</tr>

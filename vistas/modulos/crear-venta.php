@@ -126,9 +126,8 @@ if($_SESSION["perfil"] == "Especial"){
                   
                   <div class="input-group">
                     
-                    <span class="input-group-addon"><i class="fa fa-users"></i></span>
                     
-                    <select class="form-control" id="seleccionarCliente" name="seleccionarCliente" required>
+                    <select class="form-control js-example-basic-single" id="seleccionarCliente" name="seleccionarCliente" required>
 
                     <option value="">Seleccionar cliente</option>
 
@@ -149,7 +148,7 @@ if($_SESSION["perfil"] == "Especial"){
 
                     </select>
                     
-                    <span class="input-group-addon"><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#modalAgregarCliente" data-dismiss="modal">Agregar cliente</button></span>
+                    <span class="input-group-addon"></span>
                   
                   </div>
                 
@@ -172,7 +171,7 @@ if($_SESSION["perfil"] == "Especial"){
                 ======================================-->
                 <button type="button" class="btn btn-default hidden-lg btnAgregarProducto">Agregar producto</button>
 
-                <button type="button" class="btn btn-primary">Visualizar Tasa del dia</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Visualizar Tasa del dia</button>
 
                 <hr>
 
@@ -202,7 +201,7 @@ if($_SESSION["perfil"] == "Especial"){
                             
                             <div class="input-group">
                            
-                              <input type="text" class="form-control input-lg" min="0" id="nuevotasadeldia" name="nuevotasadeldia" placeholder="0">
+                              <input type="text" class="form-control input-lg nuevotasadeldia" min="0" id="nuevotasadeldia" name="nuevotasadeldia" placeholder="0">
 
                               <span class="input-group-addon"><i class="">Bs</i></span>
                         
@@ -242,7 +241,7 @@ if($_SESSION["perfil"] == "Especial"){
                             
                             <div class="input-group">
                            
-                              <input type="number" class="form-control input-lg" min="0" id="nuevoImpuestoVenta" name="nuevoImpuestoVenta" placeholder="0">
+                              <input type="number"  class="form-control input-lg" min="0" id="nuevoImpuestoVenta" name="nuevoImpuestoVenta" placeholder="0">
 
                                <input type="hidden" name="nuevoPrecioImpuesto" id="nuevoPrecioImpuesto" required>
 
@@ -260,7 +259,7 @@ if($_SESSION["perfil"] == "Especial"){
                            
                               <span class="input-group-addon"><i class="ion ion-social-usd"></i></span>
 
-                              <input type="text" class="form-control input-lg" id="nuevoTotalVenta" name="nuevoTotalVenta" total="" placeholder="00000" readonly required>
+                              <input type="text" class="form-control input-lg nuevoTotalVenta" id="nuevoTotalVenta" name="nuevoTotalVenta" total="" placeholder="00000" readonly required>
 
                               <input type="hidden" name="totalVenta" id="totalVenta">
                               
@@ -284,8 +283,8 @@ if($_SESSION["perfil"] == "Especial"){
                       <thead>
 
                         <tr>
-                          <th>Impuesto</th>
-                          <th>Total</th>      
+                          <th></th>
+                          <th>Total Bolivares</th>      
                         </tr>
 
                       </thead>
@@ -294,31 +293,18 @@ if($_SESSION["perfil"] == "Especial"){
                       
                         <tr>
                           
-                          <td style="width: 50%">
-                            
-                            <div class="input-group">
-                           
-                              <input type="number" class="form-control input-lg" min="0" id="nuevoImpuestoVenta" name="nuevoImpuestoVenta" placeholder="0" required>
-
-                               <input type="hidden" name="nuevoPrecioImpuesto" id="nuevoPrecioImpuesto" required>
-
-                               <input type="hidden" name="nuevoPrecioNeto" id="nuevoPrecioNeto" required>
-
-                              <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                          <td style="width: 15%">
                         
-                            </div>
-
                           </td>
 
                            <td style="width: 50%">
                             
                             <div class="input-group">
                            
-                              <span class="input-group-addon"><i class="ion ion-social-usd"></i></span>
+                              <span class="input-group-addon"><i class="">Bs</i></span>
 
-                              <input type="text" class="form-control input-lg" id="nuevoTotalVenta" name="nuevoTotalVenta" total="" placeholder="00000" readonly required>
+                              <input type="text" class="form-control input-lg nuevoTotalBs" id="nuevoTotalBs" name="nuevoTotalBs" total="" placeholder="00000" readonly required>
 
-                              <input type="hidden" name="totalVenta" id="totalVenta">
                               
                         
                             </div>
@@ -350,7 +336,10 @@ if($_SESSION["perfil"] == "Especial"){
                         <option value="">Seleccione método de pago</option>
                         <option value="Efectivo">Efectivo</option>
                         <option value="TC">Tarjeta Crédito</option>
-                        <option value="TD">Tarjeta Débito</option>                  
+                        <option value="TD">Tarjeta Débito</option>     
+                        <option value="TRANS">Transferencia</option>                  
+                        <option value="PM">Pago Móvil</option>                  
+
                       </select>    
 
                     </div>
@@ -575,3 +564,38 @@ MODAL AGREGAR CLIENTE
   </div>
 
 </div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title text-center" id="exampleModalLabel">Tasa del dia</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <div class='row'> 
+              <div class='col-md-2'>
+              </div>
+              <div class='col-md-8'>
+                <img class="img-responsive" src="https://monitordolarvenezuela.com/public/monitordolarweb.png" alt="mini imagen dolar paralelo">
+              </div>
+              <div class='col-md-2'>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
+</script>

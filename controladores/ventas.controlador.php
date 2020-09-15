@@ -120,6 +120,7 @@ class ControladorVentas{
 						   "impuesto"=>$_POST["nuevoPrecioImpuesto"],
 						   "neto"=>$_POST["nuevoPrecioNeto"],
 						   "total"=>$_POST["totalVenta"],
+						   "tasa_dia"=>$_POST["nuevotasadeldia"],
 						   "metodo_pago"=>$_POST["listaMetodoPago"]);
 
 			$respuesta = ModeloVentas::mdlIngresarVenta($tabla, $datos);

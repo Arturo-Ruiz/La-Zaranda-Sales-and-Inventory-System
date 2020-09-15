@@ -13,7 +13,21 @@ CARGAR LA TABLA DINÁMICA DE VENTAS
 
 // })// 
 
+$('#nuevotasadeldia').on('change', function() {
+	  //Obtengo los datos de los campos
+	  var primerValor = $('#nuevotasadeldia').val();
+	  var segundoValor = $('#nuevoTotalVenta').val()
+	  // Convierto los datos a valores numericos para no concatenar y Realizo la resta
+	  var resultado = parseFloat(primerValor) * parseFloat(segundoValor);
+	
+	$("#nuevoTotalBs").number(true, 2);
+	 
+	//Muestro el resultado en los campos
+	 
+	$('#nuevoTotalBs').val(resultado);
+	$("#nuevoTotalBs").number(true, 2);
 
+});
 
 
 $('.tablaVentas').DataTable( {
@@ -285,7 +299,9 @@ $(".btnAgregarProducto").click(function(){
       	processData: false,
       	dataType:"json",
       	success:function(respuesta){
-      	    
+			$(document).ready(function() {
+				$('.single').select2();
+			});
       	    	$(".nuevoProducto").append(
 
           	'<div class="row" style="padding:5px 15px">'+
@@ -298,7 +314,7 @@ $(".btnAgregarProducto").click(function(){
 	              
 	              '<span class="input-group-addon"><button type="button" class="btn btn-danger btn-xs quitarProducto" idProducto><i class="fa fa-times"></i></button></span>'+
 
-	              '<select class="form-control nuevaDescripcionProducto" id="producto'+numProducto+'" idProducto name="nuevaDescripcionProducto" required>'+
+	              '<select class="form-control nuevaDescripcionProducto single " id="producto'+numProducto+'" idProducto name="nuevaDescripcionProducto" required>'+
 
 	              '<option>Seleccione el producto</option>'+
 
@@ -542,6 +558,7 @@ FORMATO AL PRECIO FINAL
 =============================================*/
 
 $("#nuevoTotalVenta").number(true, 2);
+$("#nuevoTotalBs").number(true, 2);
 $("#nuevotasadeldia").number(true, 2);
 
 
@@ -608,7 +625,7 @@ $("#nuevoMetodoPago").change(function(){
                         
                 '<div class="input-group">'+
                      
-                  '<input type="number" min="0" class="form-control" id="nuevoCodigoTransaccion" placeholder="Código transacción"  required>'+
+                  '<input type="text"  class="form-control" id="nuevoCodigoTransaccion" placeholder="Código transacción"  required>'+
                        
                   '<span class="input-group-addon"><i class="fa fa-lock"></i></span>'+
                   
